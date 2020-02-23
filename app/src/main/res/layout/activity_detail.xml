@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Detail.DetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#ffffff">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/colorPrimary">
+
+            <TextView
+                android:id="@+id/DetailActivity_closeButton"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:text="X"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="#ffffff"/>
+
+
+            <TextView
+                android:id="@+id/DetailActivity_editButton"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_toLeftOf="@id/DetailActivity_deleteButton"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:text="편집"/>
+
+            <TextView
+                android:id="@+id/DetailActivity_deleteButton"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:text="삭제"/>
+
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/DetailActivity_title"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="10dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:background="#ffffff"/>
+
+        <TextView
+            android:id="@+id/DetailActivity_date"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="10dp"
+            android:gravity="center_vertical"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#efefef"></RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="10dp">
+
+            <LinearLayout
+                android:id="@+id/DetailActivity_contentParent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/DetailActivity_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:linksClickable="true"
+                    android:autoLink="web|email"/>
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#efefef"></RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/DetailActivity_bottomView"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginHorizontal="10dp">
+
+            <TextView
+                android:id="@+id/DetailActivity_openGallery"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:text="사진"
+                android:textColor="#000000"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
